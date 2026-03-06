@@ -17,21 +17,15 @@ debemos ignorar los archivos que tu PC genera localmente.
 
 Crea un archivo llamado .gitignore en la raíz de tu proyecto y pega exactamente esto:
 
-Plaintext
-# Archivos temporales de PlatformIO (No subirlos nunca)
 .pio/
 .vscode/
-
-# Archivos de sistema y compilados
 *.exe
 *.o
 *.bin
 *.out
-
-# Logs y configuración local
-node_modules/
 .DS_Store
 Thumbs.db
+
 ¿Por qué esto? Porque la carpeta .pio contiene la compilación específica de tu computadora de la oficina. 
 Si la subes y luego la descargas en casa, PlatformIO podría intentar usar archivos binarios que no 
 corresponden a esa PC y darte errores extraños.
@@ -69,4 +63,4 @@ Trabajo: Programo mi ESP32-CAM y verifico que el .gitignore esté presente.
 Me voy: git add ., luego git commit -m "..." y finalmente git push.
 
 Si en algún momento el git pull te da un error de "conflictos", significa que modificaste el mismo archivo en 
-ambos lugares sin sincronizar. ¿Te gustaría que te explique cómo resolver un conflicto de código si eso llegara a pasar?
+ambos lugares sin sincronizar.
